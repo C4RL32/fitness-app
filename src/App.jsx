@@ -1,25 +1,26 @@
 import { useState } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import VideoGallery from './pages/videos/VideoGallery';
-import viteLogo from '/vite.svg';
-import reactLogo from '/assets/react.svg';
-import './App.css';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'; // Importa react-router-dom
+import VideoGallery from './pages/Videos/VideGallery'; // Importa tu componente
+import './App.css'; // Opcional: conserva tus estilos si los necesitas
 
 function App() {
-  const [count, setCount] = useState(0);
+  const [count, setCount] = useState(0); // Puedes mantener esto si lo usas
 
   return (
     <Router>
       <Routes>
+        {/* Ruta para la galería de videos */}
         <Route path="/videos" element={<VideoGallery />} />
+
+        {/* Ruta principal (opcional: conserva el template original) */}
         <Route path="/" element={
           <>
             <div>
               <a href="https://vitejs.dev" target="_blank">
-                <img src={viteLogo} className="logo" alt="Vite logo" />
+                <img src="/vite.svg" className="logo" alt="Vite logo" />
               </a>
               <a href="https://react.dev" target="_blank">
-                <img src={reactLogo} className="logo react" alt="React logo" />
+                <img src="/react.svg" className="logo react" alt="React logo" />
               </a>
             </div>
             <h1>Vite + React</h1>
