@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'; // Im
 import VideoGallery from './pages/Videos/VideGallery'; // Importa tu componente
 import './App.css'; // Opcional: conserva tus estilos si los necesitas
 
+
 function App() {
   const [count, setCount] = useState(0); // Puedes mantener esto si lo usas
 
@@ -39,4 +40,4 @@ function App() {
   );
 }
 
-export default App;
+export def
