@@ -2,12 +2,27 @@ import { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'; // Importa react-router-dom
 import VideoGallery from './pages/Videos/VideGallery'; // Importa tu componente
 import './App.css'; // Opcional: conserva tus estilos si los necesitas
+import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
+import { AuthProvider } from "./context/AuthContext";
+import Login from "./pages/Auth/Login";
+import Register from "./pages/Auth/Register";
+import Home from "./pages/Home/Home";
 
 
 function App() {
   const [count, setCount] = useState(0); // Puedes mantener esto si lo usas
 
   return (
+     <AuthProvider>
+      <Router>
+        <Routes>
+          <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
+          <Route path="/" element={<Home />} />
+          <Route path="*" element={<Navigate to="/" />} />
+        </Routes>
+      </Router>
+    </AuthProvider>
     <Router>
       <Routes>
         {/* Ruta para la galería de videos */}
@@ -39,5 +54,7 @@ function App() {
     </Router>
   );
 }
-
+export default App;
 export def
+
+
