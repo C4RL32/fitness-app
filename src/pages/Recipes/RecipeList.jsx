@@ -4,12 +4,13 @@ import RecipeCard from './RecipeCard';
 import './Recipe.css';
 
 export default function RecipeList() {
-    const [currentCategory, setCurrentCategory] = useState('todas');
+    const [currentCategory, setCurrentCategory] = useState('Todas');
     const [searchTerm, setSearchTerm] = useState('');
 
     const filteredRecipes = recipes
+    .filter(recipe => recipe && recipe.title) // ✅ Asegura que haya receta y título
     .filter(recipe =>
-        currentCategory === 'todas' || recipe.category === currentCategory
+        currentCategory === 'Todas' || recipe.category === currentCategory
     )
     .filter(recipe =>
         recipe.title.toLowerCase().includes(searchTerm.toLowerCase())
@@ -33,19 +34,24 @@ export default function RecipeList() {
                     <button
                     key={category}
                     onClick={() => setCurrentCategory(category)}
-                    className={setCurrentCategory === category ? 'active' : ''}
-                    >
-                        {category}
-                    </button>
+                    className={currentCategory === category ? 'active' : ''} // ✅ fix aquí
+                  >
+                    {category}
+                  </button>
+                  
                 ))}
             </div>
 
             {/*Listado */}
+            {filteredRecipes.length === 0 ? (
+            <p>No se encontraron recetas.</p>
+        ) : (
             <div className="recipes-grid">
-                {filteredRecipes.map(recipe => (
-                    <RecipeCard key={recipe.id} recipe={recipe} />
+             {filteredRecipes.map(recipe => (
+                <RecipeCard key={recipe.id} recipe={recipe} />
                 ))}
             </div>
+            )}
         </div>
     );
 }

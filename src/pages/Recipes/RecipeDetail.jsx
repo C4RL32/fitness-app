@@ -1,4 +1,5 @@
 import { useParams } from 'react-router-dom';
+import { FaClock, FaFire } from 'react-icons/fa';
 import { recipes } from './recipesData';
 import './Recipe.css';
 
@@ -30,8 +31,8 @@ export default function RecipeDetail() {
                     </ul>
                 </div>
 
-                <div className="detail-setion">
-                    <h2>Preparaciçon</h2>
+                <div className="detail-section">
+                    <h2>Preparación</h2>
                     <ol>
                         {recipe.steps.map((step, i) => (
                             <li key={i}>{step}</li>

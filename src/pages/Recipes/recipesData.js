@@ -1,8 +1,8 @@
 export const recipes = [
     {
     id: 1,
-    tittle: "Batido Proteico",
-    image: "Receta1.jpg",
+    title: "Batido Proteico",
+    image: "/assets/images/Receta1.jpg",
     category: "proteínas",
     time: "5 min",
     ingredients: [
@@ -20,8 +20,8 @@ export const recipes = [
 },
 {
     id: 2,
-    tittle: "Ensalada Vegana de Garbanzos",
-    image: "Receta2.jpg",
+    title: "Ensalada Vegana de Garbanzos",
+    image: "/assets/images/Receta2.jpg",
     category: "veganas",
     time: "10 min",
     ingredients: [
@@ -41,8 +41,8 @@ export const recipes = [
 },
 {
     id: 3,
-    tittle: "Tostadas de Aguacate y Huevo",
-    image: "Receta3.jpg",
+    title: "Tostadas de Aguacate y Huevo",
+    image: "/assets/images/Receta3.jpg",
     category: "bajas en calorías",
     time: "7 min",
     ingredients: [
@@ -61,8 +61,8 @@ export const recipes = [
 },
 {
     id: 4,
-    tittle: "Smoothie Post-Entreno de Fresa y Plátano",
-    image:"Receta4.jpg",
+    title: "Smoothie Post-Entreno de Fresa y Plátano",
+    image:"/assets/images/Receta4.jpg",
     category: "post-entreno",
     time: "5 min",
     ingredients: [
@@ -81,8 +81,8 @@ export const recipes = [
 },
 {
     id: 5,
-    tittle: "Wrap de Pollo y Vegetales",
-    image: "Receta5.jpg",
+    title: "Wrap de Pollo y Vegetales",
+    image: "/assets/images/Receta5.jpg",
     category: "proteínas",
     time: "15 min",
     ingredients: [
@@ -102,8 +102,8 @@ export const recipes = [
 },
 {
     id: 6,
-    tittle: "Batido verde Detox",
-    image:"Receta6.jpg",
+    title: "Batido verde Detox",
+    image:"/assets/images/Receta6.jpg",
     category: "bajas en calorías",
     time: "3 min",
     ingredients: [
@@ -123,5 +123,5 @@ export const recipes = [
 ];
 
 export const categories = [
-"todas", "proteínas", "veganas", "bajas en calorías", "post-entreno"
+"Todas", "proteínas", "veganas", "bajas en calorías", "post-entreno"
 ];
