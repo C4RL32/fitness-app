@@ -8,6 +8,7 @@ import RecipeList from "./pages/Recipes/RecipeList";
 import RecipeDetail from "./pages/Recipes/RecipeDetail";
 import Home from "./pages/Home/Home";
 import './App.css';
+import MainLayout from './components/common/MainLayout';
 
 function App() {
   console.log("App cargada");
@@ -29,7 +30,7 @@ function App() {
           <Route path="/recipes/:id" element={<RecipeDetail />} />
           
           {/* Ruta principal */}
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<MainLayout><Home /></MainLayout>} />
           
           {/* Ruta por defecto para páginas no encontradas */}
           <Route path="*" element={<Navigate to="/" />} />
