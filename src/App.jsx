@@ -23,11 +23,11 @@ function App() {
           <Route path="/register" element={<Register />} />
           
           {/* Ruta de videos */}
-          <Route path="/videos" element={<VideoGallery />} />
+          <Route path="/videos" element={<MainLayout><VideoGallery /></MainLayout>} />
 
           {/*Ruta de Recetas */}
-          <Route path="/recipes" element={<RecipeList />} />
-          <Route path="/recipes/:id" element={<RecipeDetail />} />
+          <Route path="/recipes" element={<MainLayout><RecipeList /></MainLayout>} />
+          <Route path="/recipes/:id" element={<MainLayout><RecipeDetail /></MainLayout>} />
           
           {/* Ruta principal */}
           <Route path="/" element={<MainLayout><Home /></MainLayout>} />
