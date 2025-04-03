@@ -2,6 +2,8 @@ import { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'; // Importa react-router-dom
 import VideoGallery from './pages/Videos/VideGallery'; // Importa tu componente
 import './App.css'; // Opcional: conserva tus estilos si los necesitas
+import MainLayout from "./components/common/layout/MainLayout";
+
 
 function App() {
   const [count, setCount] = useState(0); // Puedes mantener esto si lo usas
@@ -11,6 +13,7 @@ function App() {
       <Routes>
         {/* Ruta para la galería de videos */}
         <Route path="/videos" element={<VideoGallery />} />
+
 
         {/* Ruta principal (opcional: conserva el template original) */}
         <Route path="/" element={
